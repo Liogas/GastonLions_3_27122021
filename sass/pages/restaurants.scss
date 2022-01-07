@@ -1,0 +1,60 @@
+
+
+.restaurant-img{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.main-restaurants{
+    position: relative;
+    padding: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    background-color: $fifth_color;
+
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    margin-top: -3.5rem;
+
+    section{
+        margin-top: 2rem;
+    
+        h2{
+            font-size: 1rem;
+        }
+    
+        .title-border{
+            margin-top: .25rem;
+            background-color: $seventh_color;
+            width: 2.5rem;
+            height: .15rem;
+        }
+    }
+
+    .div-btn_command{
+        width: 100%;
+        text-align: center;
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.restaurants-title{
+
+    display: grid;
+    grid-template: 1fr / 85% 5%;
+    align-items: center;
+
+    h1{
+        font-size: 1.75rem;
+        font-family: 'Shrikhand', cursive;
+    }
+
+    i{
+        margin-left: .5rem;
+    }
+}
+

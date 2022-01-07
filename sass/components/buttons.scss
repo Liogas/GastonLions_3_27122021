@@ -1,0 +1,13 @@
+
+
+.btn{
+    background: linear-gradient(170deg,$second_color 0%, $primary_color );
+    color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.div-btn_command .btn{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}

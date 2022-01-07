@@ -1,0 +1,22 @@
+
+
+html, body{
+    font-size: $size_police;
+}
+
+body{
+    font-family: $text_police;
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+}
+
+.logo{
+    font-family: $logo_police;
+}

@@ -1,0 +1,27 @@
+
+header{
+
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+
+    box-shadow: 0px 3px 5px rgba(0,0,0,.15);
+
+    &.header-restaurants{
+        box-shadow: none;
+    }
+
+    img{
+        max-width: 50%;
+    }
+
+    i{
+        position: absolute;
+        top: 1.75rem;
+        left: 1.5rem;
+
+        &:hover{
+            color: $primary_color;
+        }
+    }
+}

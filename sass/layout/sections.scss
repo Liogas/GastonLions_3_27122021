@@ -1,0 +1,74 @@
+
+
+.presentation{
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    background-color: $fourth_color;
+    
+    p{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+}
+
+
+.function{
+
+    padding : 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    ul{
+        margin-top: 2rem;
+    }
+
+    ul li{
+        margin: 1rem;
+        padding: 1rem;
+        padding-left: 0;
+        display: grid;
+        align-items: center;
+        grid-template: 1fr / .25fr 1fr 8fr;
+        border-radius: 1rem;
+        background-color: $fourth_color;
+        box-shadow: 2px 4px 10px rgba(0,0,0,.15);
+
+        
+        /* Changement de couleur de fond et d'icone. */
+
+    }
+
+    .num{
+        font-size: .8rem;
+        color: white;
+        text-align: center;
+        background-color: $primary_color;
+        border-radius: 5rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: -1rem;
+    }
+
+    i{
+        margin-left: 1.5rem;
+        color: $sixth_color;
+    }
+
+    .text{
+        margin-left: 1.5rem;
+    }
+
+}
+
+.restaurant{
+    padding: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+
+    h1{
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,111 @@
+
+
+.card{
+
+    width: 100%;
+
+    .content{
+        position:relative;
+        box-shadow: 2px 4px 10px rgba(0,0,0,.15);
+
+        border-radius: 1rem;
+        margin-top: 1rem;
+    }
+
+    img{
+        max-width: 100%;
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    p.new{
+        position: absolute;
+        background-color: $seventh_color;
+        color: $height_color;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top:.5rem;
+        padding-bottom: .5rem;
+        font-weight: bold;
+
+        right: 1rem;
+        top:1rem;
+    }
+
+    .description{
+        width: 100%;
+        padding: .75rem;
+        position: relative;
+        
+        .title{
+            font-weight: bold;
+        }
+
+        .city{
+            margin-top: .25rem;
+        }
+
+        i{
+            position:absolute;
+            right:1rem;
+            top:1rem;
+        }
+
+    }
+
+}
+
+.menu-choice{
+
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 2px 4px 10px rgba(0,0,0,.15);
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template: 1fr / 70% 15% 15%;
+    
+    
+
+    .menu-column{   
+
+        padding: .75rem;
+        
+        .menu-title{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+
+        .menu-legend{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-top: .5rem;
+        }
+
+    }
+
+    .menu-price{
+        position: relative;
+        top: 2rem;
+        font-weight: bold;
+    }
+
+    i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $seventh_color;
+        color: white;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        display: none;
+    }
+
+}
