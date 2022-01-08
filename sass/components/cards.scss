@@ -67,6 +67,8 @@
 
     display: grid;
     grid-template: 1fr / 70% 15% 15%;
+
+    overflow: hidden;
     
     
 
@@ -93,19 +95,24 @@
 
     .menu-price{
         position: relative;
-        top: 2rem;
+        top: 2.5rem;
+        left: 5.5rem;
         font-weight: bold;
     }
 
-    i{
+    .menu-bloc_i{
+        
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: $seventh_color;
+        position: relative;
         color: white;
+        background-color: $seventh_color;
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        display: none;
+
+        left: 4rem;
     }
+
 
 }
