@@ -66,31 +66,23 @@
     border-radius: 1rem;
 
     display: grid;
-    grid-template: 1fr / 70% 15% 15%;
+    grid-template: 1fr 1fr / 70% 15% 15%;
 
     overflow: hidden;
-    
-    
 
-    .menu-column{   
+    .menu-title{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 1.15rem;
+        font-weight: bold;
+    }
 
-        padding: .75rem;
-        
-        .menu-title{
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            font-size: 1.15rem;
-            font-weight: bold;
-        }
-
-        .menu-legend{
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            margin-top: .5rem;
-        }
-
+    .menu-legend{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: .5rem;
     }
 
     .menu-price{

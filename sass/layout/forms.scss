@@ -1,7 +1,5 @@
 
-
 .form_location{
-
     padding: .5rem;
     background-color: $fifth_color;
     text-align: center;
@@ -14,7 +12,6 @@
         padding: .25rem;
         width: 25%;
     }
-
 }
 
 
@@ -25,9 +22,8 @@
         display: none;
 
         &:hover + .menu-choice p.menu-price{
-
             animation-duration: 1s;
-            animation-name: test;
+            animation-name: form-price;
 
             top: 2.5rem;
             left: 1.5rem;
@@ -35,50 +31,14 @@
 
         &:hover + .menu-choice .menu-bloc_i{
             animation-duration: 1s;
-            animation-name: test2;
+            animation-name: form-bloc_i;
 
             left: 0rem;
-
-            /* Animation à faire */
         }
 
         &:hover + .menu-choice .menu-bloc_i i{
             animation-duration: 1s;
-            animation-name: test3;
+            animation-name: form-bloc-i;
         }
     }
-
-    @keyframes test {
-        from {
-            top: 2.5rem;
-            left: 5.5rem;
-        }
-        to{
-            top: 2.5rem;
-            left: 1.5rem;
-        }
-    }
-
-    @keyframes test2 {
-        from{
-            left:4rem;
-        }
-        to{
-            left:0rem;
-        }
-        
-    }
-
-    @keyframes test3 {
-        from{
-            transform: rotate(0);
-        }
-        to{
-            transform: rotate(360deg);
-        }
-        
-    }
-
-
-
 }

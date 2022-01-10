@@ -35,9 +35,7 @@
         background-color: $fourth_color;
         box-shadow: 2px 4px 10px rgba(0,0,0,.15);
 
-        
         /* Changement de couleur de fond et d'icone. */
-
     }
 
     .num{
@@ -70,5 +68,15 @@
 
     h1{
         margin-bottom: 2rem;
+    }
+}
+
+.main-restaurants section{
+    margin-top: 2rem;
+
+
+    .title-border{
+        margin-top: .25rem;
+        background-color: $seventh_color;
     }
 }

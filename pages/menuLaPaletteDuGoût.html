@@ -33,107 +33,67 @@
 
         <section>
             <form action="#" class="form_menu">
-
             
-
             <div class="step_menu">
                 <h2>ENTRÉES</h2>
                 <div class="title-border"> </div>
-                <div class="menu-choice">
-                    <div class="menu-column">
-                        <p class="menu-title">Fricassée d'escargot</p>
-                        <p class="menu-legend">Au piment d'espelette</p>
-                    </div>
-                    <p class="menu-price">25€</p>
-                    <i class="fas fa-check-circle "></i>
-                </div>
-                    <div class="menu-choice">
-                        <div class="menu-column">
-                            <p class="menu-title">Foie gras de canard mi-cuit</p>
-                            <p class="menu-legend">Et ses copeaux de truffe noire</p>
-                        </div>
-                        <p class="menu-price">35€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="menu-choice">
-                        <div class="menu-column">
+                
+                <label class="menu-meal">
+                    <input type='radio' id="oeuf" name="menu_entree" value="oeuf">
+                    <span class="menu-choice">
+                        <span class="menu-column">
                             <p class="menu-title">Oeuf au plat</p>
                             <p class="menu-legend">Assaisonné à la truffe sur lit de caviar</p>
-                        </div>
+                        </span>
                         <p class="menu-price">20€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                </div> 
+                        <span class="menu-bloc_i">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </span>
+                </label>
+            </div> 
 
             <div class="step_menu">
-                    <h2>PLATS</h2>
-                    <div class="title-border"> </div>
-                    <div class="menu-choice">
-                        <div class="menu-column">
-                            <p class="menu-title">Filet de boeuf aux herbes</p>
-                            <p class="menu-legend">Accompagné de sa ribambelle de légumes</p>
-                        </div>
-                        <p class="menu-price">40€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="menu-choice">
-                    <div class="menu-column">
-                            <p class="menu-title">Parmentier de queue de boeuf</p>
-                            <p class="menu-legend">À la truffe noire sur sa purée de panais</p>
-                        </div>
-                        <p class="menu-price">35€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="menu-choice">
-                        <div class="menu-column">
-                            <p class="menu-title">Filet de Turbot</p>
-                            <p class="menu-legend">Aux agrumes</p>
-                        </div>
-                        <p class="menu-price">44€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                </div> 
-
-                <div class="step_menu">
-                    <h2>DESSERTS</h2>
-                    <div class="title-border"> </div>
-                    <label>
-                        <input type='radio' id="Paris-Brest" name="menu" value="Paris-Brest">
-                        <div class="menu-choice">
-                            <div class="menu-column">
-                                <p class="menu-title">Paris-Brest</p>
-                                <p class="menu-legend">Revisté</p>
-                            </div>
-                            <p class="menu-price">18€</p>
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </label>
-                    <label>
-                        <input type='radio' id="Macaron" name="menu" value="Macaron">
-                        <div class="menu-choice">
-                            <div class="menu-column">
-                                <p class="menu-title">Macaron au chocolat d'exception</p>
-                                <p class="menu-legend">Et glace à la vanille de Madagascar</p>
-                            </div>
-                            <p class="menu-price">22€</p>
-                            <div class="menu-bloc_i">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </label>
-                    <div class="menu-choice">
-                        <div class="menu-column">
-                            <p class="menu-title">Mousse au chocolat</p>
-                            <p class="menu-legend">Au piment d'espelette et à la truffe noire</p>
-                        </div>
-                        <p class="menu-price">23€</p>
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                </div> 
+                <h2>PLATS</h2>
+                <div class="title-border"> </div>
                 
-                <div class="div-btn_command">
-                    <input type="submit" value="Commander">
-                </div>
+                <label class="menu-meal">
+                    <input type='radio' id="oeuf" name="menu_entree" value="oeuf">
+                    <span class="menu-choice">
+                        <span class="menu-column">
+                            <p class="menu-title">Oeuf au plat</p>
+                            <p class="menu-legend">Assaisonné à la truffe sur lit de caviar</p>
+                        </span>
+                        <p class="menu-price">20€</p>
+                        <span class="menu-bloc_i">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="step_menu">
+                <h2>DESSERTS</h2>
+                <div class="title-border"> </div>
+                
+                <label class="menu-meal">
+                    <input type='radio' id="oeuf" name="menu_entree" value="oeuf">
+                    <span class="menu-choice">
+                        <span class="menu-column">
+                            <p class="menu-title">Oeuf au plat</p>
+                            <p class="menu-legend">Assaisonné à la truffe sur lit de caviar</p>
+                        </span>
+                        <p class="menu-price">20€</p>
+                        <span class="menu-bloc_i">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="div-btn_command">
+                <input class="btn_cmd" type="submit" value="Commander">
+            </div>
 
             </form>
         </section>
