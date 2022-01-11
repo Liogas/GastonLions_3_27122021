@@ -1,0 +1,18 @@
+.form_location {
+    background-color: $fifth_color;
+    color:$ninth_color;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        margin-left: 2.5rem;
+    }
+    input {
+        padding-left: 1rem;
+        font-size: 1rem;
+        background: none;
+        border:none;
+    }
+}

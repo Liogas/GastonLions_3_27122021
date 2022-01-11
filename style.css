@@ -1,6 +1,29 @@
-@charset "UTF-8";
 /* Variables for the font */
 /* Color */
+@keyframes form-price {
+  from {
+    transform: translate(5.5vh, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes form-bloc_i {
+  from {
+    transform: translate(5.5vh, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes form-bloc-i {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -69,24 +92,35 @@ body a {
 }
 
 header {
-  text-align: center;
-  padding: 1.5rem;
-  position: relative;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
-}
-header.header-restaurants {
-  box-shadow: none;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
 }
 header img {
-  max-width: 50%;
+  max-width: 45%;
+  font-size: 1rem;
 }
-header i {
-  position: absolute;
-  top: 1.75rem;
-  left: 1.5rem;
+header.header-restaurants {
+  display: grid;
+  grid-template: 1fr/30% 70%;
 }
-header i:hover {
+header.header-restaurants img {
+  max-width: 60%;
+}
+header.header-restaurants i {
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+}
+header.header-restaurants i:hover {
   color: #9356DC;
+}
+header.header-index {
+  position: relative;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+main section h2 {
+  font-weight: bold;
 }
 
 .presentation {
@@ -95,9 +129,18 @@ header i:hover {
   padding-bottom: 4rem;
   background-color: #f6f6f6;
 }
+.presentation h1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .presentation p {
-  margin-top: 1rem;
+  font-weight: lighter;
+  margin-top: 0.75rem;
   margin-bottom: 3rem;
+  font-size: 1.15rem;
 }
 
 .function {
@@ -109,102 +152,102 @@ header i:hover {
   margin-top: 2rem;
 }
 .function ul li {
-  margin: 1rem;
-  padding: 1rem;
-  padding-left: 0;
-  display: grid;
-  align-items: center;
-  grid-template: 1fr/0.25fr 1fr 8fr;
-  border-radius: 1rem;
   background-color: #f6f6f6;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
-  /* Changement de couleur de fond et d'icone. */
+  display: grid;
+  grid-template-columns: 0px 25% 1fr;
+  align-items: center;
+  margin: 1rem;
+  padding: 1.25rem;
+  padding-left: 0;
+  border-radius: 1rem;
+  transition: background-color 0.5s, box-shadow 0.5s;
 }
-.function .num {
-  font-size: 0.8rem;
-  color: white;
-  text-align: center;
+.function ul li .num {
   background-color: #9356DC;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -0.5rem;
   border-radius: 5rem;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: -1rem;
+  height: 25px;
+  width: 25px;
 }
-.function i {
-  margin-left: 1.5rem;
+.function ul li i {
   color: #7e7e7e;
+  margin-left: 2.5rem;
+  transition: color 0.5s;
 }
-.function .text {
-  margin-left: 1.5rem;
+.function ul li i.logo_tel {
+  font-size: 1.25rem;
+}
+.function ul li i.logo_list {
+  font-size: 1.05rem;
+}
+.function ul li .text {
+  font-weight: 500;
+}
+.function ul li:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: #f4eefc;
+}
+.function ul li:hover i {
+  color: #9356DC;
 }
 
 .restaurant {
   padding: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  background-color: #f6f6f6;
 }
-.restaurant h1 {
-  margin-bottom: 2rem;
+.restaurant h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-restaurants section {
+  margin-top: 2rem;
+}
+.main-restaurants section .title-border {
+  margin-top: 0.25rem;
+  height: 0.15rem;
+  width: 4rem;
+  background-color: #99e2d0;
 }
 
 .form_location {
-  padding: 0.5rem;
   background-color: #eaeaea;
-  text-align: center;
+  color: #353535;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_location i {
+  margin-left: 2.5rem;
 }
 .form_location input {
+  padding-left: 1rem;
   font-size: 1rem;
   background: none;
   border: none;
-  margin-left: 0.5rem;
-  padding: 0.25rem;
-  width: 25%;
 }
 
 .form_menu input {
   display: none;
 }
-.form_menu input:hover + .menu-choice p.menu-price {
-  animation-duration: 1s;
-  animation-name: test;
-  top: 2.5rem;
-  left: 1.5rem;
+.form_menu .menu-choice:hover p.menu-price {
+  transform: translate(0, 0);
 }
-.form_menu input:hover + .menu-choice .menu-bloc_i {
-  animation-duration: 1s;
-  animation-name: test2;
-  left: 0rem;
-  /* Animation à faire */
+.form_menu .menu-choice:hover .menu-bloc_i {
+  transform: translate(0, 0);
 }
-.form_menu input:hover + .menu-choice .menu-bloc_i i {
-  animation-duration: 1s;
-  animation-name: test3;
-}
-@keyframes test {
-  from {
-    top: 2.5rem;
-    left: 5.5rem;
-  }
-  to {
-    top: 2.5rem;
-    left: 1.5rem;
-  }
-}
-@keyframes test2 {
-  from {
-    left: 4rem;
-  }
-  to {
-    left: 0rem;
-  }
-}
-@keyframes test3 {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form_menu .menu-choice:hover .menu-bloc_i i {
+  transform: rotate(360deg);
 }
 
 footer {
@@ -246,44 +289,87 @@ footer li a:hover {
 
 .btn {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC);
+  /*background: $primary_color;*/
   color: white;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   border-radius: 2rem;
+  font-size: 1rem;
+  /*transition: background-color 2s, box-shadow 2s;
+  &:hover {
+      background-color: $second_color;
+      box-shadow: 1px 4px 5px rgba(0,0,0,.4);
+  }*/
 }
 
-.div-btn_command .btn {
+.btn-cmd {
   padding-left: 4rem;
   padding-right: 4rem;
 }
 
+.container-heart {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 1;
+}
+.container-heart i {
+  position: absolute;
+  color: black;
+  font-size: 1.5rem;
+  transition: transform 1s;
+}
+.container-heart i.heart-empty {
+  color: black;
+}
+.container-heart i.heart-full {
+  top: -0.1rem;
+  left: -0.05rem;
+  background: linear-gradient(170deg, #FF79DA 0%, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  font-size: 1.7rem;
+  z-index: 2;
+}
+.container-heart:hover .heart-full {
+  transform: scale(1);
+}
+
 .card {
   width: 100%;
-}
-.card .content {
   position: relative;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
   margin-top: 1rem;
 }
 .card img {
+  object-fit: cover;
   max-width: 100%;
   width: 100%;
-  height: 175px;
-  object-fit: cover;
+  height: 173px;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
+.card img.position-center_bottom {
+  object-position: center bottom;
+}
+.card img.position-center_61 {
+  object-position: center 61%;
+}
 .card p.new {
-  position: absolute;
   background-color: #99e2d0;
   color: #39a98e;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  right: 1rem;
-  top: 1rem;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  border-radius: 0.1rem;
 }
 .card .description {
   width: 100%;
@@ -295,11 +381,7 @@ footer li a:hover {
 }
 .card .description .city {
   margin-top: 0.25rem;
-}
-.card .description i {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
+  font-weight: 300;
 }
 
 .menu-choice {
@@ -307,31 +389,36 @@ footer li a:hover {
   background-color: white;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
+  padding-left: 0.5rem;
   display: grid;
-  grid-template: 1fr/70% 15% 15%;
+  grid-template-areas: "title . i" "legend price i";
+  grid-template-columns: 70% 15% 15%;
   overflow: hidden;
 }
-.menu-choice .menu-column {
-  padding: 0.75rem;
-}
-.menu-choice .menu-column .menu-title {
+.menu-choice .menu-title {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 1.15rem;
   font-weight: bold;
+  margin-top: 0.75rem;
+  grid-area: title;
 }
-.menu-choice .menu-column .menu-legend {
+.menu-choice .menu-legend {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  grid-area: legend;
 }
 .menu-choice .menu-price {
-  position: relative;
-  top: 2.5rem;
-  left: 5.5rem;
   font-weight: bold;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  grid-area: price;
+  transform: translate(5.5vh, 0);
+  transition: 1s;
 }
 .menu-choice .menu-bloc_i {
   display: flex;
@@ -342,7 +429,14 @@ footer li a:hover {
   background-color: #99e2d0;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  left: 4rem;
+  grid-area: i;
+  transform: translate(5.5vh, 0);
+  transition: 1s;
+}
+.menu-choice .menu-bloc_i i {
+  font-size: 1.25rem;
+  transform: rotate(0deg);
+  transition: 1s;
 }
 
 .restaurant-img {
@@ -361,18 +455,6 @@ footer li a:hover {
   border-top-right-radius: 2rem;
   margin-top: -3.5rem;
 }
-.main-restaurants section {
-  margin-top: 2rem;
-}
-.main-restaurants section h2 {
-  font-size: 1rem;
-}
-.main-restaurants section .title-border {
-  margin-top: 0.25rem;
-  background-color: #99e2d0;
-  width: 2.5rem;
-  height: 0.15rem;
-}
 .main-restaurants .div-btn_command {
   width: 100%;
   text-align: center;
@@ -390,7 +472,7 @@ footer li a:hover {
   font-family: "Shrikhand", cursive;
 }
 .restaurants-title i {
-  margin-left: 0.5rem;
+  font-size: 1.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */

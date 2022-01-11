@@ -1,0 +1,20 @@
+
+.presentation {
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    background-color: $fourth_color;
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    p {
+        font-weight:lighter;
+        margin-top: .75rem;
+        margin-bottom: 3rem;
+        font-size: 1.15rem;
+    }
+}

@@ -9,8 +9,12 @@
 @import './layout/body.scss';
 @import './layout/header.scss';
 @import './layout/main.scss';
-@import './layout/sections.scss';
-@import './layout/forms.scss';
+@import './layout/sections/presentation';
+@import './layout/sections/function';
+@import './layout/sections/restaurant';
+@import './layout/sections/restaurant_menu';
+@import './layout/forms/form_location.scss';
+@import './layout/forms/form_menu.scss';
 @import './layout/footer.scss';
 
 @import './components/buttons.scss';

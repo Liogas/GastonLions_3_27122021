@@ -1,0 +1,54 @@
+
+.function {
+    padding : 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    ul {
+        margin-top: 2rem;
+    }
+    ul li {
+        background-color: $fourth_color;
+        box-shadow: 2px 4px 10px rgba(0,0,0,.15);
+        display: grid;
+        grid-template-columns: 0px 25% 1fr;
+        align-items: center;
+        margin: 1rem;
+        padding: 1.25rem;
+        padding-left: 0;
+        border-radius: 1rem;
+        transition: background-color .5s, box-shadow .5s;
+        .num {
+            background-color: $primary_color;
+            color: white;
+            font-size: .8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -.5rem;
+            border-radius: 5rem;
+            height: 25px;
+            width: 25px;
+        }
+        i {
+            color: $sixth_color;
+            margin-left: 2.5rem;
+            transition: color .5s;
+            &.logo_tel{
+                font-size: 1.25rem;
+            }
+            &.logo_list{
+                font-size: 1.05rem;
+            }
+        }
+        .text {
+            font-weight: 500;
+        }
+        &:hover {
+            box-shadow: 2px 4px 10px rgba(0,0,0,.25);
+            background-color: lighten($primary_color, 36%);
+            i{
+                color: $primary_color;
+            }
+        }
+    }
+}

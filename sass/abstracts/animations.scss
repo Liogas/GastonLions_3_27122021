@@ -1,27 +1,25 @@
 
 @keyframes form-price {
         from {
-            top: 2.5rem;
-            left: 5.5rem;
+            transform: translate(5.5vh, 0);
         }
         to{
-            top: 2.5rem;
-            left: 1.5rem;
+            transform: translate(0, 0);
         }
 }
 
 @keyframes form-bloc_i {
     from{
-        left:4rem;
+        transform: translate(5.5vh, 0);
     }
     to{
-        left:0rem;
+        transform: translate(0, 0);
     }
 }
 
 @keyframes form-bloc-i{
     from{
-        @include tranform(rotate(0deg));
+        @include transform(rotate(0deg));
     }
     to{
         @include transform(rotate(360deg));
