@@ -1,16 +1,5 @@
 .form_menu {
-    input {
+    input[type="radio"] {
         display: none;
-    }
-    .menu-choice:hover {
-        p.menu-price{
-            transform: translate(0, 0);
-        }
-        .menu-bloc_i {
-            transform: translate(0, 0);
-        }
-        .menu-bloc_i i {
-            transform: rotate(360deg);
-        }
     }
 }

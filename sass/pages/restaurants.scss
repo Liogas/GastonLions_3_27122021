@@ -3,30 +3,35 @@
     max-width: 100%;
     object-fit: cover;
 }
-.main-restaurants {
-    background-color: $gray_color400;
+.container-restaurants {
+    background-color: $gray_color100;
     position: relative;
     padding: 2rem 1rem;
-    margin-top: -3.5rem;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    .div-btn_command{
-        width: 100%;
-        text-align: center;
-        margin-top: 4rem;
-        padding-bottom: 4rem;
-    }
+    margin-top: -3.3rem;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    
 }
 .restaurants-title {
     display: grid;
     grid-template: 1fr / 85% 5%;
     align-items: center;
+    margin-left:.5rem;
     h1{
         font-size: 1.75rem;
         font-family: $logo_police;
     }
-    i{
-        font-size: 1.75rem;
+    .container-heart{
+        bottom: 0;
+        top: 2.5rem;
+        right: 3.5rem;
+        i{
+            font-size: 1.5rem;
+            &.heart-full{
+                top: 0rem;
+                left:.03rem;
+            }
+        }
     }
 }
 

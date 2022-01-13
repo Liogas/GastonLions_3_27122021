@@ -14,7 +14,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: 1.15rem;
-        font-weight: bold;
         margin-top: .75rem;
         grid-area: title;
     }
@@ -22,6 +21,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-weight: 300;
         margin-top: .25rem;
         margin-bottom: .75rem;
         grid-area: legend;
@@ -31,8 +31,6 @@
         margin-top: .25rem;
         margin-bottom: .75rem;
         grid-area: price;
-        transform: translate(5.5vh, 0);
-        transition: 1s;
     }
     .menu-bloc_i{
         background-color: $third_color;
@@ -43,13 +41,9 @@
         position: relative;
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        transform: translate(5.5vh, 0);
-        transition: 1s;
         grid-area: i;
         i{
-            font-size: 1.25rem;
-            transform: rotate(0deg);
-            transition: 1s; 
+            font-size: 1.25rem; 
         }
     }
 }

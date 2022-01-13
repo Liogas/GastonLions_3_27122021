@@ -1,9 +1,18 @@
-.main-restaurants section {
+.container-restaurants section {
     margin-top: 2rem;
+
+    .step_menu{
+        margin-top: 2rem;
+
+        h2{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
     .title-border {
         margin-top: .25rem;
-        height: .15rem;
-        width: 4rem;
+        height: .18rem;
+        width: 2.5rem;
         background-color: $third_color;
     }
 }

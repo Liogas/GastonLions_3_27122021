@@ -1,0 +1,48 @@
+
+.step_menu{
+    &.entree .menu-choice{
+        animation-delay: .5s;
+    }
+    &.meal .menu-choice{
+        animation-delay: 1s;
+    }
+    &.dessert .menu-choice{
+        animation-delay: 2s;
+    }
+    .menu-choice{
+        opacity:0;
+        animation: fadein 2s;
+        animation-fill-mode: forwards;
+        .menu-price{
+            transform: translate(100%, 0);
+            transition: transform 1s;
+        }
+        .menu-bloc_i {
+            transform: translate(100%, 0);
+            transition: transform 1s;
+            i{
+                transform: rotate(0deg);
+                transition: 1s;
+            }
+        }
+        &:hover {
+            .menu-price{
+                transform: translate(0, 0);
+            }
+            .menu-bloc_i {
+                transform: translate(0, 0);
+            }
+            .menu-bloc_i i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

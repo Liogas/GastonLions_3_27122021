@@ -1,13 +1,5 @@
 /* Variables for the font */
 /* Color */
-/* Animation heart of cards */
-.container-heart i {
-  transition: transform 1s;
-}
-.container-heart:hover .heart-full {
-  transform: scale(1);
-}
-
 /* Animation btn Function */
 .animation-btn {
   transition: background-color 0.5s, box-shadow 0.5s;
@@ -78,6 +70,66 @@
   }
   to {
     opacity: 0;
+  }
+}
+/* Animation heart of cards */
+.container-heart i {
+  transition: transform 1s;
+}
+.container-heart:hover .heart-full {
+  transform: scale(1);
+}
+.container-heart:hover .heart-empty {
+  transform: scale(0.9);
+}
+
+.btn:hover, .div-btn_command .btn_cmd:hover {
+  background: linear-gradient(170deg, #ff93e1 0%, #a16be0);
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.step_menu.entree .menu-choice {
+  animation-delay: 0.5s;
+}
+.step_menu.meal .menu-choice {
+  animation-delay: 1s;
+}
+.step_menu.dessert .menu-choice {
+  animation-delay: 2s;
+}
+.step_menu .menu-choice {
+  opacity: 0;
+  animation: fadein 2s;
+  animation-fill-mode: forwards;
+}
+.step_menu .menu-choice .menu-price {
+  transform: translate(100%, 0);
+  transition: transform 1s;
+}
+.step_menu .menu-choice .menu-bloc_i {
+  transform: translate(100%, 0);
+  transition: transform 1s;
+}
+.step_menu .menu-choice .menu-bloc_i i {
+  transform: rotate(0deg);
+  transition: 1s;
+}
+.step_menu .menu-choice:hover .menu-price {
+  transform: translate(0, 0);
+}
+.step_menu .menu-choice:hover .menu-bloc_i {
+  transform: translate(0, 0);
+}
+.step_menu .menu-choice:hover .menu-bloc_i i {
+  transform: rotate(360deg);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 a {
@@ -179,6 +231,38 @@ main section h2 {
   font-weight: bold;
 }
 
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1rem 2rem 3rem 2rem;
+}
+footer h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+}
+footer ul {
+  margin-top: 1rem;
+}
+footer li {
+  margin-top: 0.5rem;
+}
+footer li.li_logo {
+  display: grid;
+  grid-template: 1fr/1rem 1fr;
+}
+footer li.li_logo a {
+  margin-left: 0.75rem;
+}
+footer li i {
+  text-align: center;
+}
+footer li a {
+  color: white;
+}
+footer li a:hover {
+  text-decoration: underline;
+}
+
 .presentation {
   text-align: center;
   padding: 2rem;
@@ -256,13 +340,20 @@ main section h2 {
   margin-bottom: 1.5rem;
 }
 
-.main-restaurants section {
+.container-restaurants section {
   margin-top: 2rem;
 }
-.main-restaurants section .title-border {
+.container-restaurants section .step_menu {
+  margin-top: 2rem;
+}
+.container-restaurants section .step_menu h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.container-restaurants section .title-border {
   margin-top: 0.25rem;
-  height: 0.15rem;
-  width: 4rem;
+  height: 0.18rem;
+  width: 2.5rem;
   background-color: #99E2D0;
 }
 
@@ -286,52 +377,11 @@ main section h2 {
   border: none;
 }
 
-.form_menu input {
+.form_menu input[type=radio] {
   display: none;
 }
-.form_menu .menu-choice:hover p.menu-price {
-  transform: translate(0, 0);
-}
-.form_menu .menu-choice:hover .menu-bloc_i {
-  transform: translate(0, 0);
-}
-.form_menu .menu-choice:hover .menu-bloc_i i {
-  transform: rotate(360deg);
-}
 
-footer {
-  background-color: #353535;
-  color: white;
-  padding: 1rem 2rem 3rem 2rem;
-}
-footer h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.2rem;
-}
-footer ul {
-  margin-top: 1rem;
-}
-footer li {
-  margin-top: 0.5rem;
-}
-footer li.li_logo {
-  display: grid;
-  grid-template: 1fr/1rem 1fr;
-}
-footer li.li_logo a {
-  margin-left: 0.75rem;
-}
-footer li i {
-  text-align: center;
-}
-footer li a {
-  color: white;
-}
-footer li a:hover {
-  text-decoration: underline;
-}
-
-.btn {
+.btn, .div-btn_command .btn_cmd {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC);
   color: white;
   font-size: 1rem;
@@ -340,9 +390,15 @@ footer li a:hover {
   box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
 }
 
-.btn-cmd {
-  padding-left: 4rem;
-  padding-right: 4rem;
+.div-btn_command {
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}
+.div-btn_command .btn_cmd {
+  border: none;
+  padding: 1rem 3rem;
 }
 
 .container-heart {
@@ -429,7 +485,6 @@ footer li a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1.15rem;
-  font-weight: bold;
   margin-top: 0.75rem;
   grid-area: title;
 }
@@ -437,6 +492,7 @@ footer li a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 300;
   margin-top: 0.25rem;
   margin-bottom: 0.75rem;
   grid-area: legend;
@@ -446,8 +502,6 @@ footer li a:hover {
   margin-top: 0.25rem;
   margin-bottom: 0.75rem;
   grid-area: price;
-  transform: translate(5.5vh, 0);
-  transition: 1s;
 }
 .menu-choice .menu-bloc_i {
   background-color: #99E2D0;
@@ -458,14 +512,10 @@ footer li a:hover {
   position: relative;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  transform: translate(5.5vh, 0);
-  transition: 1s;
   grid-area: i;
 }
 .menu-choice .menu-bloc_i i {
   font-size: 1.25rem;
-  transform: rotate(0deg);
-  transition: 1s;
 }
 
 .container-spinner {
@@ -488,32 +538,36 @@ footer li a:hover {
   object-fit: cover;
 }
 
-.main-restaurants {
-  background-color: #eaeaea;
+.container-restaurants {
+  background-color: #f6f6f6;
   position: relative;
   padding: 2rem 1rem;
-  margin-top: -3.5rem;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-}
-.main-restaurants .div-btn_command {
-  width: 100%;
-  text-align: center;
-  margin-top: 4rem;
-  padding-bottom: 4rem;
+  margin-top: -3.3rem;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
 }
 
 .restaurants-title {
   display: grid;
   grid-template: 1fr/85% 5%;
   align-items: center;
+  margin-left: 0.5rem;
 }
 .restaurants-title h1 {
   font-size: 1.75rem;
   font-family: "Shrikhand", cursive;
 }
-.restaurants-title i {
-  font-size: 1.75rem;
+.restaurants-title .container-heart {
+  bottom: 0;
+  top: 2.5rem;
+  right: 3.5rem;
+}
+.restaurants-title .container-heart i {
+  font-size: 1.5rem;
+}
+.restaurants-title .container-heart i.heart-full {
+  top: 0rem;
+  left: 0.03rem;
 }
 
 /*# sourceMappingURL=style.css.map */

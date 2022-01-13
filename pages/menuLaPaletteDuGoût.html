@@ -28,61 +28,73 @@
     <main class="container-restaurants">
         <div class="restaurants-title">
             <h1>La palette du goût</h1>
-            <i class="far fa-heart"></i>
+            <span class="container-heart">
+                <i class="fas fa-heart heart-full"></i>
+                <i class="far fa-heart heart-empty"></i>    
+            </span>
         </div>
 
         <section>
             <form action="#" class="form_menu">
             
-            <div class="step_menu">
+            <div class="step_menu entree">
                 <h2>ENTRÉES</h2>
                 <div class="title-border"> </div>
                 
                 <label class="menu-choice">
+                    <input type='radio' id="escargot" name="menu_entree" value="escargot">
+                    <span class="menu-title">Fricassée d'escargot</span>
+                    <span class="menu-legend">Au pimet d'espelette</span>
+                    <span class="menu-price">25€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
+                    <input type='radio' id="canard" name="menu_entree" value="canard">
+                    <span class="menu-title">Foie gras de canard mi-cuit</span>
+                    <span class="menu-legend">Et ses copeaux de truffe noire</span>
+                    <span class="menu-price">35€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
                     <input type='radio' id="oeuf" name="menu_entree" value="oeuf">
-                    <p class="menu-title">Oeuf au plat</p>
-                    <p class="menu-legend">Assaisonné à la truffe sur lit de caviar</p>
-                    <p class="menu-price animation-left">20€</p>
-                    <span class="menu-bloc_i animation-left">
-                        <i class="fas fa-check-circle animation-"></i>
+                    <span class="menu-title">Oeuf au plat</span>
+                    <span class="menu-legend">Assaisonné à la truffe sur lit de caviar</span>
+                    <span class="menu-price">20€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
                     </span>
                 </label>
             </div> 
 
-            <div class="step_menu">
+            <div class="step_menu meal">
                 <h2>PLATS</h2>
                 <div class="title-border"> </div>
-                
-                <label class="menu-meal">
+                <label class="menu-choice">
                     <input type='radio' id="oeuf" name="menu_entree" value="oeuf">
-                    <span class="menu-choice">
-                        <span class="menu-column">
-                            <p class="menu-title">Oeuf au plat</p>
-                            <p class="menu-legend">Assaisonné à la truffe sur lit de caviar</p>
-                        </span>
-                        <p class="menu-price">20€</p>
-                        <span class="menu-bloc_i">
-                            <i class="fas fa-check-circle"></i>
-                        </span>
+                    <span class="menu-title">Oeuf au plat</span>
+                    <span class="menu-legend">Assaisonné à la truffe sur lit de caviar</span>
+                    <span class="menu-price">20€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
                     </span>
                 </label>
+                
             </div>
 
-            <div class="step_menu">
+            <div class="step_menu dessert">
                 <h2>DESSERTS</h2>
                 <div class="title-border"> </div>
-                
-                <label class="menu-meal">
+                <label class="menu-choice">
                     <input type='radio' id="oeuf" name="menu_entree" value="oeuf">
-                    <span class="menu-choice">
-                        <span class="menu-column">
-                            <p class="menu-title">Oeuf au plat</p>
-                            <p class="menu-legend">Assaisonné à la truffe sur lit de caviar</p>
-                        </span>
-                        <p class="menu-price">20€</p>
-                        <span class="menu-bloc_i">
-                            <i class="fas fa-check-circle"></i>
-                        </span>
+                    <span class="menu-title">Oeuf au plat</span>
+                    <span class="menu-legend">Assaisonné à la truffe sur lit de caviar</span>
+                    <span class="menu-price">20€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
                     </span>
                 </label>
             </div>

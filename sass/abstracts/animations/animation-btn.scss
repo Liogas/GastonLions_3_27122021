@@ -1,0 +1,8 @@
+.btn{
+    &:hover{
+        $c1 : lighten($primary_color,5%);
+        $c2 : lighten($second_color,5%);
+        background: linear-gradient(170deg,$c2 0%, $c1 );
+        box-shadow: 1px 4px 5px rgba(0,0,0,.30);
+    }
+}

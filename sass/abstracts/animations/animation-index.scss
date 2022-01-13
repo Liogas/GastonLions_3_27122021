@@ -1,12 +1,3 @@
-/* Animation heart of cards */ 
-.container-heart {
-    i {
-        transition: transform 1s;
-    }
-    &:hover .heart-full {
-        transform: scale(1);
-    }
-}
 /* Animation btn Function */
 .animation-btn {
     transition: background-color .5s, box-shadow .5s;

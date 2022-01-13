@@ -9,10 +9,18 @@
     box-shadow: 1px 4px 5px rgba(0,0,0,.20);
 }
 
-.btn-cmd {
-    padding-left: 4rem;
-    padding-right: 4rem;
+.div-btn_command{
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+    .btn_cmd {
+        @extend.btn;
+        border: none;
+        padding: 1rem 3rem;
+    }
 }
+
 
 .container-heart{
     position: absolute;
