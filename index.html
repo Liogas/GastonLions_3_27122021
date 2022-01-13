@@ -15,49 +15,45 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <header class="header-index">
+    <div class="container-spinner">
+        <i class="fas fa-spinner"></i>
+    </div>
+    <header class="header-index wait">
         <img src="./images/logo/ohmyfood.png" alt="OhMyFood">
     </header>
-
-
-    <main>
-
+    <main class="wait container-index">
         <form method="POST" class="form_location">
                 <i class="fas fa-map-marker-alt"></i>
                 <input type="text" value="Paris, Belleville">
         </form>
-
         <section class="presentation">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
             <a href="#" class="btn">Explorer nos restaurants</a>
         </section>
-
         <section class="function">
             <h2>Fonctionnement</h2>
             <ul>
-                <li>
+                <li class="animation-btn">
                     <span class="num">1</span>
                     <i class="fas fa-mobile-alt logo_tel"></i>
                     <p class="text">Choisissez un restaurant</p>
                 </li>
-                <li>
+                <li class="animation-btn">
                     <span class="num">2</span>
                     <i class="fas fa-list-ul logo_list"></i>
                     <p class="text">Composez votre menu</p>
                 </li>
-                <li>
+                <li class="animation-btn">
                     <span class="num">3</span>
                     <i class="fas fa-store logo_store"></i>
                     <p class="text">Dégustez au restaurant</p>
                 </li>
             </ul>
         </section>
-
         <section class="restaurant">
             <h2>Restaurants</h2>
-            <div class="card">
+            <div class="card animation-btn">
                 <a href="./pages/menuLaPaletteDuGoût.html">
                     <img  class="position-center_bottom" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                     <div class="description">
@@ -73,7 +69,7 @@
                     </span>
                 </a>
             </div>
-            <div class="card">
+            <div class="card animation-btn">
                 <a href="./pages/menuLaNoteEnchantee.html">
                     <img class="position-center_61" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                     <div class="description">
@@ -88,7 +84,7 @@
                     </span>
                 </a>
             </div>
-            <div class="card">
+            <div class="card animation-btn">
                 <a href="./pages/menuALaFrancaise.html">
                     <img class="position-center_bottom" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
                     <div class="description">
@@ -101,29 +97,26 @@
                         <i class="fas fa-heart heart-full"></i>
                         <i class="far fa-heart heart-empty"></i>
                     </span>
-                    </a>
-                </div>
-    
-                <div class="card">
-                    <a href="./pages/menuLedelicedessens.html">
-                        <img class="position-center_bottom" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                        <div class="description">
-                            <p class="title">Le délice des sens</p>
-                            <p class="city">Folie-Méricourt</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <span class="container-heart">
-                            <i class="fas fa-heart heart-full"></i>
-                            <i class="far fa-heart heart-empty"></i>
-                        </span>
-                        </a>
+                </a>
+            </div>
+            <div class="card animation-btn">
+                <a href="./pages/menuLedelicedessens.html">
+                    <img class="position-center_bottom" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                    <div class="description">
+                        <p class="title">Le délice des sens</p>
+                        <p class="city">Folie-Méricourt</p>
                     </div>
+                </a>
+                <a href="#">
+                    <span class="container-heart">
+                        <i class="fas fa-heart heart-full"></i>
+                        <i class="far fa-heart heart-empty"></i>
+                    </span>
+                </a>
+            </div>
         </section>
-
     </main>
-
-    <footer>
+    <footer class="wait">
         <h1>ohmyfood</h1>
         <ul>
             <li class="li_logo"><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>

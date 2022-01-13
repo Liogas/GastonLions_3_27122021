@@ -7,7 +7,7 @@
         margin-top: 2rem;
     }
     ul li {
-        background-color: $fourth_color;
+        background-color: $gray_color100;
         box-shadow: 2px 4px 10px rgba(0,0,0,.15);
         display: grid;
         grid-template-columns: 0px 25% 1fr;
@@ -16,7 +16,6 @@
         padding: 1.25rem;
         padding-left: 0;
         border-radius: 1rem;
-        transition: background-color .5s, box-shadow .5s;
         .num {
             background-color: $primary_color;
             color: white;
@@ -30,7 +29,7 @@
             width: 25px;
         }
         i {
-            color: $sixth_color;
+            color: $gray_color700;
             margin-left: 2.5rem;
             transition: color .5s;
             &.logo_tel{
@@ -42,13 +41,6 @@
         }
         .text {
             font-weight: 500;
-        }
-        &:hover {
-            box-shadow: 2px 4px 10px rgba(0,0,0,.25);
-            background-color: lighten($primary_color, 36%);
-            i{
-                color: $primary_color;
-            }
         }
     }
 }

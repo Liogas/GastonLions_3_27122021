@@ -1,29 +1,90 @@
 /* Variables for the font */
 /* Color */
-@keyframes form-price {
+/* Animation heart of cards */
+.container-heart i {
+  transition: transform 1s;
+}
+.container-heart:hover .heart-full {
+  transform: scale(1);
+}
+
+/* Animation btn Function */
+.animation-btn {
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+.animation-btn:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: #f4eefc;
+}
+.animation-btn:hover i {
+  color: #9356DC;
+}
+.animation-btn:hover i.heart-empty {
+  color: black;
+}
+
+/* Animation loading page */
+.wait {
+  animation-name: animation-view_container;
+  animation-duration: 3s;
+}
+
+.container-spinner {
+  animation-name: animation-spinner_start;
+  animation-duration: 3s;
+}
+
+.container-spinner i {
+  animation-name: animation-spinner;
+  animation-duration: 3s;
+}
+
+/* KEYFRAMES */
+@keyframes animation-view_container {
   from {
-    transform: translate(5.5vh, 0);
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
   }
   to {
-    transform: translate(0, 0);
+    opacity: 100;
   }
 }
-@keyframes form-bloc_i {
+@keyframes animation-spinner {
   from {
-    transform: translate(5.5vh, 0);
-  }
-  to {
-    transform: translate(0, 0);
-  }
-}
-@keyframes form-bloc-i {
-  from {
+    color: #9356DC;
     transform: rotate(0deg);
   }
-  to {
+  33% {
     transform: rotate(360deg);
+    color: #FF79DA;
+  }
+  66% {
+    transform: rotate(720deg);
+    color: #9356DC;
+  }
+  to {
+    transform: rotate(1080deg);
+    color: #FF79DA;
   }
 }
+@keyframes animation-spinner_start {
+  from {
+    opacity: 100;
+  }
+  90% {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -84,11 +145,6 @@ body h2 {
 
 .logo {
   font-family: "Shrikhand", cursive;
-}
-
-body a {
-  color: black;
-  text-decoration: none;
 }
 
 header {
@@ -161,7 +217,6 @@ main section h2 {
   padding: 1.25rem;
   padding-left: 0;
   border-radius: 1rem;
-  transition: background-color 0.5s, box-shadow 0.5s;
 }
 .function ul li .num {
   background-color: #9356DC;
@@ -189,13 +244,6 @@ main section h2 {
 .function ul li .text {
   font-weight: 500;
 }
-.function ul li:hover {
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
-  background-color: #f4eefc;
-}
-.function ul li:hover i {
-  color: #9356DC;
-}
 
 .restaurant {
   padding: 2rem;
@@ -215,7 +263,7 @@ main section h2 {
   margin-top: 0.25rem;
   height: 0.15rem;
   width: 4rem;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
 }
 
 .form_location {
@@ -231,9 +279,10 @@ main section h2 {
   margin-left: 2.5rem;
 }
 .form_location input {
-  padding-left: 1rem;
-  font-size: 1rem;
   background: none;
+  color: #353535;
+  font-size: 1rem;
+  padding-left: 1rem;
   border: none;
 }
 
@@ -252,16 +301,11 @@ main section h2 {
 
 footer {
   background-color: #353535;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
   color: white;
+  padding: 1rem 2rem 3rem 2rem;
 }
 footer h1 {
   font-family: "Shrikhand", cursive;
-  font-family: "Shrikhand", cursive;
-  font-style: italic;
   font-size: 1.2rem;
 }
 footer ul {
@@ -289,19 +333,11 @@ footer li a:hover {
 
 .btn {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC);
-  /*background: $primary_color;*/
   color: white;
-  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  border-radius: 2rem;
   font-size: 1rem;
-  /*transition: background-color 2s, box-shadow 2s;
-  &:hover {
-      background-color: $second_color;
-      box-shadow: 1px 4px 5px rgba(0,0,0,.4);
-  }*/
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn-cmd {
@@ -316,35 +352,28 @@ footer li a:hover {
   z-index: 1;
 }
 .container-heart i {
+  color: black;
   position: absolute;
-  color: black;
   font-size: 1.5rem;
-  transition: transform 1s;
-}
-.container-heart i.heart-empty {
-  color: black;
 }
 .container-heart i.heart-full {
-  top: -0.1rem;
-  left: -0.05rem;
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transform: scale(0);
   font-size: 1.7rem;
+  top: -0.14rem;
+  left: -0.1rem;
+  transform: scale(0);
   z-index: 2;
-}
-.container-heart:hover .heart-full {
-  transform: scale(1);
 }
 
 .card {
   width: 100%;
   position: relative;
+  margin-top: 1rem;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
-  margin-top: 1rem;
 }
 .card img {
   object-fit: cover;
@@ -361,44 +390,44 @@ footer li a:hover {
   object-position: center 61%;
 }
 .card p.new {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #39a98e;
+  font-size: 0.9rem;
+  font-weight: bold;
   position: absolute;
   right: 0.75rem;
   top: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: bold;
   padding: 0.25rem 0.75rem 0.25rem 0.75rem;
   border-radius: 0.1rem;
 }
 .card .description {
+  position: relative;
   width: 100%;
   padding: 0.75rem;
-  position: relative;
 }
 .card .description .title {
   font-weight: bold;
 }
 .card .description .city {
-  margin-top: 0.25rem;
   font-weight: 300;
+  margin-top: 0.25rem;
 }
 
 .menu-choice {
-  margin-top: 1rem;
   background-color: white;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 1rem;
-  padding-left: 0.5rem;
+  overflow: hidden;
   display: grid;
   grid-template-areas: "title . i" "legend price i";
   grid-template-columns: 70% 15% 15%;
-  overflow: hidden;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
 }
 .menu-choice .menu-title {
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.15rem;
   font-weight: bold;
   margin-top: 0.75rem;
@@ -406,8 +435,8 @@ footer li a:hover {
 }
 .menu-choice .menu-legend {
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 0.25rem;
   margin-bottom: 0.75rem;
   grid-area: legend;
@@ -421,22 +450,36 @@ footer li a:hover {
   transition: 1s;
 }
 .menu-choice .menu-bloc_i {
+  background-color: #99E2D0;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: white;
-  background-color: #99e2d0;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  grid-area: i;
   transform: translate(5.5vh, 0);
   transition: 1s;
+  grid-area: i;
 }
 .menu-choice .menu-bloc_i i {
   font-size: 1.25rem;
   transform: rotate(0deg);
   transition: 1s;
+}
+
+.container-spinner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+}
+.container-spinner i {
+  font-size: 5rem;
 }
 
 .restaurant-img {
@@ -446,14 +489,12 @@ footer li a:hover {
 }
 
 .main-restaurants {
-  position: relative;
-  padding: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   background-color: #eaeaea;
+  position: relative;
+  padding: 2rem 1rem;
+  margin-top: -3.5rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  margin-top: -3.5rem;
 }
 .main-restaurants .div-btn_command {
   width: 100%;

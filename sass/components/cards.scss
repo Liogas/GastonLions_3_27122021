@@ -1,11 +1,9 @@
-
-
 .card {
     width: 100%;
     position:relative;
+    margin-top: 1rem;
     box-shadow: 2px 4px 10px rgba(0,0,0,.15);
     border-radius: 1rem;
-    margin-top: 1rem;
     img {
         object-fit: cover;
         max-width: 100%;
@@ -21,104 +19,27 @@
         }
     } 
     p.new {
-        background-color: $seventh_color;
-        color: $height_color;
+        background-color: $third_color;
+        color: $third_color700;
+        font-size: .9rem;
+        font-weight: bold;
         position: absolute;
         right: .75rem;
         top: .75rem;
-        font-size: .9rem;
-        font-weight: bold;
         padding: .25rem .75rem .25rem .75rem;
         border-radius: .1rem;
     }
     .description {
+        position: relative;
         width: 100%;
         padding: .75rem;
-        position: relative;
         .title {
             font-weight: bold;
         }
         .city {
-            margin-top: .25rem;
             font-weight: 300;
+            margin-top: .25rem;
         }
     }
 }
 
-.menu-choice{
-
-    margin-top: 1rem;
-    background-color: white;
-    box-shadow: 2px 4px 10px rgba(0,0,0,.15);
-    border-radius: 1rem;
-    padding-left: .5rem;
-
-    display: grid;
-    grid-template-areas: 'title . i'
-                          'legend price i'; 
-    grid-template-columns: 70% 15% 15%;
-    overflow: hidden;
-
-    .menu-title{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        font-size: 1.15rem;
-        font-weight: bold;
-
-        margin-top: .75rem;
-
-
-        grid-area: title;
-    }
-
-    .menu-legend{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-
-        margin-top: .25rem;
-
-        margin-bottom: .75rem;
-
-        grid-area: legend;
-    }
-
-    .menu-price{
-        font-weight: bold;
-
-        margin-top: .25rem;
-        margin-bottom: .75rem;
-
-
-        grid-area: price;
-
-        transform: translate(5.5vh, 0);
-        transition: 1s;
-    }
-
-    .menu-bloc_i{
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        color: white;
-        background-color: $seventh_color;
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        
-        grid-area: i;
-
-        transform: translate(5.5vh, 0);
-        transition: 1s;
-
-        i{
-            font-size: 1.25rem;
-            transform: rotate(0deg);
-            transition: 1s; 
-        }
-    }
-
-
-}

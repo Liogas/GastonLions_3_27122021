@@ -1,48 +1,31 @@
-
-
-footer{
-
-    background-color: $ninth_color;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-
+footer {
+    background-color: $gray_color900;
     color: white;
-
-    h1{
-        font-family: 'Shrikhand', cursive;    font-family: 'Shrikhand', cursive;
-        font-style: italic;
+    padding: 1rem 2rem 3rem 2rem;
+    h1 { 
+        font-family: $logo_police;
         font-size: 1.2rem;
-   }
-
-    ul{
+    }
+    ul {
         margin-top: 1rem;
     } 
-
-    li{
+    li {
         margin-top: .5rem;
-         
         &.li_logo{
             display: grid;
             grid-template: 1fr / 1rem 1fr;
-
-            a{
+            a {
                 margin-left: .75rem;
             }
         }
-
-        i{
+        i {
             text-align: center;
-         }
-
-         a{
+        }
+        a {
             color: white;
-
             &:hover{
                 text-decoration: underline;
             }
          }
-
     }
 }

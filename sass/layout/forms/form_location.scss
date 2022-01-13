@@ -1,6 +1,6 @@
 .form_location {
-    background-color: $fifth_color;
-    color:$ninth_color;
+    background-color: $gray_color400;
+    color: $gray_color900;
     padding-top: .75rem;
     padding-bottom: .75rem;
     display: flex;
@@ -10,9 +10,10 @@
         margin-left: 2.5rem;
     }
     input {
-        padding-left: 1rem;
-        font-size: 1rem;
         background: none;
+        color : $gray_color900;
+        font-size: 1rem;
+        padding-left: 1rem;
         border:none;
     }
 }

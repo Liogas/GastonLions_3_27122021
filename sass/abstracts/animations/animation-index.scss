@@ -1,0 +1,78 @@
+/* Animation heart of cards */ 
+.container-heart {
+    i {
+        transition: transform 1s;
+    }
+    &:hover .heart-full {
+        transform: scale(1);
+    }
+}
+/* Animation btn Function */
+.animation-btn {
+    transition: background-color .5s, box-shadow .5s;
+    &:hover {
+        box-shadow: 2px 4px 10px rgba(0,0,0,.25);
+        background-color: lighten($primary_color, 36%);
+        i {
+            color: $primary_color;
+            &.heart-empty {
+                color: black;
+            }
+        }
+    }
+}
+ /* Animation loading page */
+.wait {
+    animation-name: animation-view_container;
+    animation-duration: 3s;
+}
+.container-spinner {
+    animation-name: animation-spinner_start;
+    animation-duration: 3s;
+}
+.container-spinner i {
+    animation-name : animation-spinner;
+    animation-duration: 3s;
+}
+/* KEYFRAMES */
+@keyframes animation-view_container {
+    from {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+@keyframes animation-spinner {
+    from {
+        color : $primary_color;
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(360deg);
+        color: $second-color;
+    }
+    66% {
+        transform: rotate(720deg);
+        color : $primary_color;
+    }
+    to {
+        transform: rotate(1080deg);
+        color: $second-color;
+    }
+}
+
+@keyframes animation-spinner_start {
+    from {
+        opacity: 100;
+    }
+    90% {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}

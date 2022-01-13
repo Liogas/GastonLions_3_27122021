@@ -1,0 +1,55 @@
+.menu-choice{
+    background-color: white;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 'title . i'
+                          'legend price i'; 
+    grid-template-columns: 70% 15% 15%;
+    margin-top: 1rem;
+    padding-left: .5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 10px rgba(0,0,0,.15);
+    .menu-title{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.15rem;
+        font-weight: bold;
+        margin-top: .75rem;
+        grid-area: title;
+    }
+    .menu-legend{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: .25rem;
+        margin-bottom: .75rem;
+        grid-area: legend;
+    }
+    .menu-price{
+        font-weight: bold;
+        margin-top: .25rem;
+        margin-bottom: .75rem;
+        grid-area: price;
+        transform: translate(5.5vh, 0);
+        transition: 1s;
+    }
+    .menu-bloc_i{
+        background-color: $third_color;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        transform: translate(5.5vh, 0);
+        transition: 1s;
+        grid-area: i;
+        i{
+            font-size: 1.25rem;
+            transform: rotate(0deg);
+            transition: 1s; 
+        }
+    }
+}

@@ -2,19 +2,11 @@
 
 .btn {
     background: linear-gradient(170deg,$second_color 0%, $primary_color );
-    /*background: $primary_color;*/
     color: white;
-    box-shadow: 1px 4px 5px rgba(0,0,0,.20);
-    padding: 1rem;
-    padding-left:1.5rem;
-    padding-right:1.5rem;
-    border-radius: 2rem;
     font-size: 1rem;
-    /*transition: background-color 2s, box-shadow 2s;
-    &:hover {
-        background-color: $second_color;
-        box-shadow: 1px 4px 5px rgba(0,0,0,.4);
-    }*/
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 1px 4px 5px rgba(0,0,0,.20);
 }
 
 .btn-cmd {
@@ -28,26 +20,19 @@
     bottom: 3rem;
     z-index: 1;
     i {
-        position: absolute;
         color : black;
+        position: absolute;
         font-size: 1.5rem;
-        transition: transform 1s;
-        &.heart-empty{
-            color: black;
-        }
         &.heart-full{
-            top: -.1rem;
-            left: -.05rem;
             background: linear-gradient(170deg,$second_color 0%, $primary_color );
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            transform: scale(0);
             font-size: 1.7rem;
+            top: -.14rem;
+            left: -.1rem;
+            transform: scale(0);
             z-index: 2;
         }
-    }
-    &:hover .heart-full{
-        transform: scale(1);
     }
 }

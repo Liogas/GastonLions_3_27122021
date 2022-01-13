@@ -1,24 +1,15 @@
-
-
-.restaurant-img{
+.restaurant-img {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
 }
-
-.main-restaurants{
+.main-restaurants {
+    background-color: $gray_color400;
     position: relative;
-    padding: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    background-color: $fifth_color;
-
+    padding: 2rem 1rem;
+    margin-top: -3.5rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
-
-    margin-top: -3.5rem;
-
     .div-btn_command{
         width: 100%;
         text-align: center;
@@ -26,17 +17,14 @@
         padding-bottom: 4rem;
     }
 }
-
-.restaurants-title{
+.restaurants-title {
     display: grid;
     grid-template: 1fr / 85% 5%;
     align-items: center;
-
     h1{
         font-size: 1.75rem;
-        font-family: 'Shrikhand', cursive;
+        font-family: $logo_police;
     }
-
     i{
         font-size: 1.75rem;
     }
