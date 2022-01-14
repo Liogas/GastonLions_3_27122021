@@ -1,8 +1,5 @@
-
 .function {
-    padding : 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding : 2rem 1rem 2rem 1rem;
     ul {
         margin-top: 2rem;
     }
@@ -32,10 +29,10 @@
             color: $gray_color700;
             margin-left: 2.5rem;
             transition: color .5s;
-            &.logo_tel{
+            &.logo_tel {
                 font-size: 1.25rem;
             }
-            &.logo_list{
+            &.logo_list {
                 font-size: 1.05rem;
             }
         }

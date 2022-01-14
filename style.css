@@ -18,17 +18,17 @@
 /* Animation loading page */
 .wait {
   animation-name: animation-view_container;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .container-spinner {
   animation-name: animation-spinner_start;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .container-spinner i {
   animation-name: animation-spinner;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 /* KEYFRAMES */
@@ -48,17 +48,13 @@
     color: #9356DC;
     transform: rotate(0deg);
   }
-  33% {
+  50% {
     transform: rotate(360deg);
     color: #FF79DA;
   }
-  66% {
+  to {
     transform: rotate(720deg);
     color: #9356DC;
-  }
-  to {
-    transform: rotate(1080deg);
-    color: #FF79DA;
   }
 }
 @keyframes animation-spinner_start {
@@ -80,7 +76,7 @@
   transform: scale(1);
 }
 .container-heart:hover .heart-empty {
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 .btn:hover, .div-btn_command .btn_cmd:hover {
@@ -95,11 +91,10 @@
   animation-delay: 1s;
 }
 .step_menu.dessert .menu-choice {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .step_menu .menu-choice {
-  opacity: 0;
-  animation: fadein 2s;
+  animation: fadein 1s;
   animation-fill-mode: forwards;
 }
 .step_menu .menu-choice .menu-price {
@@ -127,9 +122,11 @@
 @keyframes fadein {
   from {
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 a {
@@ -264,10 +261,10 @@ footer li a:hover {
 }
 
 .presentation {
+  background-color: #f6f6f6;
   text-align: center;
   padding: 2rem;
   padding-bottom: 4rem;
-  background-color: #f6f6f6;
 }
 .presentation h1 {
   margin-left: auto;
@@ -277,16 +274,14 @@ footer li a:hover {
   font-weight: bold;
 }
 .presentation p {
-  font-weight: lighter;
   margin-top: 0.75rem;
   margin-bottom: 3rem;
   font-size: 1.15rem;
+  font-weight: lighter;
 }
 
 .function {
-  padding: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 .function ul {
   margin-top: 2rem;
@@ -330,10 +325,8 @@ footer li a:hover {
 }
 
 .restaurant {
-  padding: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   background-color: #f6f6f6;
+  padding: 2rem 1rem 2rem 1rem;
 }
 .restaurant h2 {
   margin-top: 1.5rem;
@@ -351,10 +344,10 @@ footer li a:hover {
   font-weight: 400;
 }
 .container-restaurants section .title-border {
+  background-color: #99E2D0;
   margin-top: 0.25rem;
   height: 0.18rem;
   width: 2.5rem;
-  background-color: #99E2D0;
 }
 
 .form_location {
@@ -372,8 +365,8 @@ footer li a:hover {
 .form_location input {
   background: none;
   color: #353535;
-  font-size: 1rem;
   padding-left: 1rem;
+  font-size: 1rem;
   border: none;
 }
 
@@ -479,6 +472,7 @@ footer li a:hover {
   padding-left: 0.5rem;
   border-radius: 1rem;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
 }
 .menu-choice .menu-title {
   white-space: nowrap;

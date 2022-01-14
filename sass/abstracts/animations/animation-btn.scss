@@ -1,5 +1,5 @@
-.btn{
-    &:hover{
+.btn {
+    &:hover {
         $c1 : lighten($primary_color,5%);
         $c2 : lighten($second_color,5%);
         background: linear-gradient(170deg,$c2 0%, $c1 );
