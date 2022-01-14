@@ -1,8 +1,25 @@
 .restaurant {
     background-color: $gray_color100;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem;
     h2 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+    }
+    @media screen and (min-width: 810px) {
+        grid-area: re;
+        display: grid;
+        grid-template-areas:'h2 .'
+                            'r2 r3'
+                            'r4 r5'    
+        ;
+        h2{
+            margin-top: 0;
+            grid-area: h2;
+        }
+    }
+    @for $i from 2 through 5 {
+        .card:nth-child(#{$i}) {
+            grid-area: r#{$i};
+        }
     }
 }

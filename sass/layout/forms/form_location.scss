@@ -1,8 +1,7 @@
 .form_location {
     background-color: $gray_color400;
     color: $gray_color900;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    padding: .75rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,5 +14,9 @@
         padding-left: 1rem;
         font-size: 1rem;
         border:none;
+    }
+    @media screen and (min-width: 810px) {
+        grid-area: lo;
+        padding: 1.5rem 0rem;
     }
 }

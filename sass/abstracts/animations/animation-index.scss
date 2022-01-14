@@ -13,7 +13,7 @@
     }
 }
  /* Animation loading page */
- $duration-animation_spinner:2s;
+ $duration-animation_spinner:0s;
 .wait {
     animation-name: animation-view_container;
     animation-duration: $duration-animation_spinner;

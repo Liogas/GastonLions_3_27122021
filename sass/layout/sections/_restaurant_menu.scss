@@ -13,4 +13,32 @@
         height: .18rem;
         width: 2.5rem;
     }
+
+    @media screen and (min-width: 810px) {
+        .step_menu {
+            display: grid;
+            grid-template-areas:'h2 . . .'
+                                'bo . . .'
+                                's3 s3 s4 s4'
+                                's5 s5 s6 s6'
+            ;
+            padding-left: 1rem;
+            h2 {
+                grid-area:h2;
+            }
+            .title-border {
+                grid-area: bo;
+            }
+            @for $i from 3 through 6 {
+                .menu-choice:nth-child(#{$i}) {
+                    grid-area: s#{$i};
+                }
+
+            }
+            
+        }
+        
+    }
+
+
 }

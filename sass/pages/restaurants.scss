@@ -3,6 +3,7 @@
     max-width: 100%;
     object-fit: cover;
 }
+
 .container-restaurants {
     background-color: $gray_color100;
     position: relative;
@@ -10,28 +11,42 @@
     margin-top: -3.3rem;
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
-    
-}
-.restaurants-title {
-    display: grid;
-    grid-template: 1fr / 85% 5%;
-    align-items: center;
-    margin-left:.5rem;
-    h1{
-        font-size: 1.75rem;
-        font-family: $logo_police;
+    .restaurants-title {
+        display: grid;
+        grid-template: 1fr / 85% 5%;
+        align-items: center;
+        margin-left:.5rem;
+        h1{
+            font-size: 1.75rem;
+            font-family: $logo_police;
+        }
+        .container-heart{
+            bottom: 0;
+            top: 2.5rem;
+            right: 3.5rem;
+            i{
+                font-size: 1.5rem;
+                &.heart-full{
+                    top: 0rem;
+                    left:.03rem;
+                }
+            }
+        }
     }
-    .container-heart{
-        bottom: 0;
-        top: 2.5rem;
-        right: 3.5rem;
-        i{
-            font-size: 1.5rem;
-            &.heart-full{
-                top: 0rem;
-                left:.03rem;
+    @media screen and (min-width: 810px) {
+        margin-top: -10rem;
+        .restaurants-title {
+            h1{
+                margin-left: .5rem;
+            }
+            .container-heart{
+                right: 4.5rem;
+                i{
+                    font-size: 2rem;
+                }
             }
         }
     }
 }
+
 
