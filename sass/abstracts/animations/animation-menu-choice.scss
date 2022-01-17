@@ -15,7 +15,6 @@
             transition: transform 1s;
         }
         .menu-bloc_i {
-            transform: translate(100%, 0);
             transition: transform 1s;
             i {
                 transform: rotate(0deg);
@@ -27,7 +26,7 @@
                 transform: translate(0, 0);
             }
             .menu-bloc_i {
-                transform: translate(0, 0);
+                transform: translate(1px, 0);
             }
             .menu-bloc_i i {
                 transform: rotate(360deg);

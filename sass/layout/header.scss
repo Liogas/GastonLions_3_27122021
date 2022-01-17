@@ -1,35 +1,40 @@
 header {
     padding-top: 1.25rem;
     padding-bottom: .75rem;
+    position: relative;
+    text-align: center;
     img {
-        max-width: 45%;
+        max-width: 50%;
         font-size: 1rem;
     }
-    &.header-restaurants {
-        display: grid;
-        grid-template: 1fr / 30% 70%;
-        img{
-            max-width: 60%;
-        }
-        i {
-            padding-left: 1.5rem;
-            font-size: 1.25rem;
-            &:hover {
-                color: $primary_color;
-            }
+    i {
+        position: absolute;
+        top: 40px;
+        left: 25px;
+        font-size: 1.25rem;
+        &:hover {
+            color: $primary_color;
         }
     }
     &.header-index {
-        position: relative;
-        text-align: center;
         box-shadow: 0px 2px 2px rgba(0,0,0,.15);
     }
+    @media screen and (max-width: 600px) {
+        i{
+            top: 30px;
+            left: 25px;
+            font-size: 1.1rem;
+        }
+    }
     @media screen and (min-width : 810px){
-        &.header-restaurants{
-            i{
-                margin-top: 1rem;
-                font-size:1.5rem;
-            }
+        i{
+            left: 30px;
+            font-size:1.5rem;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        i {
+            left: 45px;
         }
     }
 }

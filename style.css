@@ -18,17 +18,17 @@
 /* Animation loading page */
 .wait {
   animation-name: animation-view_container;
-  animation-duration: 0s;
+  animation-duration: 3s;
 }
 
 .container-spinner {
   animation-name: animation-spinner_start;
-  animation-duration: 0s;
+  animation-duration: 3s;
 }
 
 .container-spinner i {
   animation-name: animation-spinner;
-  animation-duration: 0s;
+  animation-duration: 3s;
 }
 
 /* KEYFRAMES */
@@ -101,7 +101,6 @@
   transition: transform 1s;
 }
 .step_menu .menu-choice .menu-bloc_i {
-  transform: translate(100%, 0);
   transition: transform 1s;
 }
 .step_menu .menu-choice .menu-bloc_i i {
@@ -112,7 +111,7 @@
   transform: translate(0, 0);
 }
 .step_menu .menu-choice:hover .menu-bloc_i {
-  transform: translate(0, 0);
+  transform: translate(1px, 0);
 }
 .step_menu .menu-choice:hover .menu-bloc_i i {
   transform: rotate(360deg);
@@ -198,34 +197,41 @@ body h2 {
 header {
   padding-top: 1.25rem;
   padding-bottom: 0.75rem;
+  position: relative;
+  text-align: center;
 }
 header img {
-  max-width: 45%;
+  max-width: 50%;
   font-size: 1rem;
 }
-header.header-restaurants {
-  display: grid;
-  grid-template: 1fr/30% 70%;
-}
-header.header-restaurants img {
-  max-width: 60%;
-}
-header.header-restaurants i {
-  padding-left: 1.5rem;
+header i {
+  position: absolute;
+  top: 40px;
+  left: 25px;
   font-size: 1.25rem;
 }
-header.header-restaurants i:hover {
+header i:hover {
   color: #9356DC;
 }
 header.header-index {
-  position: relative;
-  text-align: center;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
+@media screen and (max-width: 600px) {
+  header i {
+    top: 30px;
+    left: 25px;
+    font-size: 1.1rem;
+  }
+}
 @media screen and (min-width: 810px) {
-  header.header-restaurants i {
-    margin-top: 1rem;
+  header i {
+    left: 30px;
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header i {
+    left: 45px;
   }
 }
 
@@ -278,7 +284,7 @@ footer li a:hover {
   padding: 2rem;
   padding-bottom: 4rem;
 }
-.presentation h1 {
+.presentation h2 {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -372,6 +378,17 @@ footer li a:hover {
     padding-top: 0.5rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .function {
+    padding: 4rem 2rem;
+  }
+  .function li i.logo_tel {
+    font-size: 2.25rem;
+  }
+  .function li i.logo_list {
+    font-size: 3.05rem;
+  }
+}
 
 .restaurant {
   background-color: #f6f6f6;
@@ -403,6 +420,13 @@ footer li a:hover {
 }
 .restaurant .card:nth-child(5) {
   grid-area: r5;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant {
+    padding: 4rem 2rem;
+    grid-template-areas: "h2 . . ." "r2 r3 r4 r5";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .container-restaurants section {
@@ -461,7 +485,7 @@ footer li a:hover {
 .form_location input {
   background: none;
   color: #353535;
-  padding-left: 1rem;
+  margin-left: 1rem;
   font-size: 1rem;
   border: none;
 }
@@ -565,6 +589,11 @@ footer li a:hover {
     height: 200px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 90%;
+  }
+}
 
 .menu-choice {
   background-color: white;
@@ -612,6 +641,7 @@ footer li a:hover {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   grid-area: i;
+  transform: translate(101%, 0);
 }
 .menu-choice .menu-bloc_i i {
   font-size: 1.25rem;
@@ -690,6 +720,11 @@ footer li a:hover {
   }
   .container-restaurants .restaurants-title .container-heart i {
     font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-restaurants {
+    margin-top: -25rem;
   }
 }
 

@@ -22,4 +22,11 @@
             grid-area: r#{$i};
         }
     }
+    @media screen and (min-width: 1024px) {
+        padding: 4rem 2rem;
+        grid-template-areas: 'h2 . . .'
+                             'r2 r3 r4 r5'
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
