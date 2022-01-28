@@ -5,20 +5,3 @@ main{
         }
     }
 }
-
-.container-index {
-    @media screen and (min-width: 810px) {
-        display: grid;
-        grid-template-areas: ' lo lo lo lo lo lo lo lo lo lo'
-                             ' pr pr pr pr pr pr pr pr pr pr '                               
-                             ' pr pr pr pr pr pr pr pr pr pr '                               
-                             ' fu fu fu fu fu fu fu fu fu fu ' 
-                             ' fu fu fu fu fu fu fu fu fu fu '                              
-                             ' re re re re re re re re re re '                              
-                             ' re re re re re re re re re re '                              
-                             ' re re re re re re re re re re '                              
-                             ' re re re re re re re re re re '                              
-                             ' re re re re re re re re re re '                              
-                             ;
-    }
-}

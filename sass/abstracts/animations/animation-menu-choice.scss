@@ -1,38 +1,32 @@
 .step_menu {
+    .menu-choice {
+        animation: fadein .5s;
+        animation-fill-mode: forwards;
+        .menu-price, .menu-bloc_i {
+            transition: transform .5s;
+            i {
+                transition: .5s;
+            }
+        }
+        &:hover {
+            .menu-price, .menu-bloc_i {
+                transform: translateX(0);
+            }
+            .menu-bloc_i i {
+                transform: rotate(-360deg);
+            }
+        }
+    }
     &.entree .menu-choice {
         animation-delay: .5s;
     }
     &.meal .menu-choice {
-        animation-delay: 1s;
+        animation-delay: .75s;
     }
     &.dessert .menu-choice {
-        animation-delay: 1.5s;
+        animation-delay: 1s;
     }
-    .menu-choice {
-        animation: fadein 1s;
-        animation-fill-mode: forwards;
-        .menu-price {
-            transition: transform 1s;
-        }
-        .menu-bloc_i {
-            transition: transform 1s;
-            i {
-                transform: rotate(0deg);
-                transition: 1s;
-            }
-        }
-        &:hover {
-            .menu-price {
-                transform: translate(0, 0);
-            }
-            .menu-bloc_i {
-                transform: translate(1px, 0);
-            }
-            .menu-bloc_i i {
-                transform: rotate(360deg);
-            }
-        }
-    }
+    
 }
 @keyframes fadein {
     from {

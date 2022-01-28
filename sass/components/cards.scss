@@ -3,6 +3,7 @@
     position:relative;
     box-shadow: 2px 4px 10px rgba(0,0,0,.15);
     border-radius: 1rem;
+    margin-top: 1rem;
     img {
         object-fit: cover;
         max-width: 100%;
@@ -34,15 +35,16 @@
             margin-top: .25rem;
         }
     }
-    @media screen and (min-width: 810px) {
+    @include tablet {
         width: 90%;
         margin: 1rem auto;
         img{
             height: 200px;
         }
     }
-    @media screen and (min-width: 1024px){
+    @include desktop {
         width: 90%;
+
     }
 }
 

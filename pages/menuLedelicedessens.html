@@ -7,115 +7,144 @@
     <!-- Police -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
     <!-- ICONE --> 
     <script src="https://kit.fontawesome.com/c1abb48736.js" crossorigin="anonymous"></script>
     <title>OhMyFood</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-    <header>
-        <i class="fas fa-arrow-left"></i>
-        <img src="images/logo/ohmyfood.png">
+    <header class="header-restaurants">
+        <a href="../index.html">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <img src="../images/logo/ohmyfood.png" alt="OhMyFood">
     </header>
-    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
-    <main>
-        <div>
+
+    <img class="restaurants-img" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant Le délice des sens">
+    
+    <main class="container-restaurants">
+        <div class="restaurants-title">
             <h1>Le délice des sens</h1>
-            <i class="far fa-heart"></i>
+            <span class="container-heart">
+                <i class="fas fa-heart heart-full"></i>
+                <i class="far fa-heart heart-empty"></i>    
+            </span>
         </div>
-       <section>
-           <h1>ENTRÉES</h1>
-           <div class="menu-choice">
-               <div class="menu-column">
-                   <p class="menu-title">Tartare de thon</p>
-                   <p class="menu-legend">Assaisonné au yuzu</p>
-               </div>
-               <p class="menu-price">25€</p>
-               <i class="fas fa-check-circle"></i>
-           </div>
-           <div class="menu-choice">
-            <div class="menu-column">
-                <p class="menu-title">Bouchée de homard croustillant</p>
-                <p class="menu-legend">Et sa farandole de petits légumes</p>
-            </div>
-            <p class="menu-price">35€</p>
-            <i class="fas fa-check-circle"></i>
-        </div>
-        <div class="menu-choice">
-            <div class="menu-column">
-                <p class="menu-title">Velouté de cèpes</p>
-                <p class="menu-legend">Aux truffes</p>
-            </div>
-            <p class="menu-price">20€</p>
-            <i class="fas fa-check-circle"></i>
-        </div>
-       </section> 
-       <section>
-        <h1>PLATS</h1>
-        <div class="menu-choice">
-            <div class="menu-column">
-                <p class="menu-title">Poulet et rôti aux herbes de provence</p>
-                <p class="menu-legend">Et sa crème de truffe</p>
-            </div>
-            <p class="menu-price">40€</p>
-            <i class="fas fa-check-circle"></i>
-        </div>
-        <div class="menu-choice">
-            <div class="menu-column">
-                <p class="menu-title">Langouste rôtie</p>
-                <p class="menu-legend">Et ses légumes de saison</p>
-            </div>
-            <p class="menu-price">35€</p>
-            <i class="fas fa-check-circle"></i>
-        </div>
-        <div class="menu-choice">
-            <div class="menu-column">
-                <p class="menu-title">Côte de boeuf angus</p>
-                <p class="menu-legend">Et sa purée de panais</p>
-            </div>
-            <p class="menu-price">44€</p>
-            <i class="fas fa-check-circle"></i>
-        </div>
-        </section> 
+
         <section>
-            <h1>DESSERTS</h1>
-            <div class="menu-choice">
-                <div class="menu-column">
-                    <p class="menu-title">Farandole de desserts</p>
-                    <p class="menu-legend">Du chef</p>
-                </div>
-                <p class="menu-price">18€</p>
-                <i class="fas fa-check-circle"></i>
+            <form action="#" class="form_menu">
+            
+            <div class="step_menu entree choice3">
+                <h2>ENTRÉES</h2>
+                <div class="title-border"> </div>
+                
+                <label class="menu-choice">
+                    <input type='radio' id="thon" name="menu_entree" value="thon">
+                    <span class="menu-title">Tartare de thon</span>
+                    <span class="menu-legend">Assaisonné au yuzu</span>
+                    <span class="menu-price">25€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
+                    <input type='radio' id="homard" name="menu_entree" value="homard">
+                    <span class="menu-title">Bouchée de homard croustillant</span>
+                    <span class="menu-legend">Et sa farandole de petits légumes</span>
+                    <span class="menu-price">35€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
+                    <input type='radio' id="cepe" name="menu_entree" value="cepe">
+                    <span class="menu-title">Velouté de cèpes</span>
+                    <span class="menu-legend">Aux truffes</span>
+                    <span class="menu-price">20€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+            </div> 
+
+            <div class="step_menu meal">
+                <h2>PLATS</h2>
+                <div class="title-border"> </div>
+                <label class="menu-choice">
+                    <input type='radio' id="poulet" name="menu_meal" value="poulet">
+                    <span class="menu-title">Poulet rôti aux herbes de Provence</span>
+                    <span class="menu-legend">Et sa crème de truffe</span>
+                    <span class="menu-price">40€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
+                    <input type='radio' id="langouste" name="menu_meal" value="langouste">
+                    <span class="menu-title">Langouste rôtie</span>
+                    <span class="menu-legend">Et ses légumes de saison</span>
+                    <span class="menu-price">35€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
+                    <input type='radio' id="boeuf" name="menu_meal" value="boeuf">
+                    <span class="menu-title">Côte de boeuf Angus</span>
+                    <span class="menu-legend">Et sa purée de panais</span>
+                    <span class="menu-price">44€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
             </div>
-            <div class="menu-choice">
-                <div class="menu-column">
-                    <p class="menu-title">Crème brulée</p>
-                    <p class="menu-legend">Revisitée</p>
-                </div>
-                <p class="menu-price">22€</p>
-                <i class="fas fa-check-circle"></i>
+            <div class="step_menu dessert">
+                <h2>DESSERTS</h2>
+                <div class="title-border"> </div>
+                <label class="menu-choice">
+                    <input type='radio' id="farandole" name="menu_dessert" value="farandole">
+                    <span class="menu-title">Farandole de desserts</span>
+                    <span class="menu-legend">Du chef</span>
+                    <span class="menu-price">18€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
+                    <input type='radio' id="creme" name="menu_dessert" value="creme">
+                    <span class="menu-title">Crème brulée</span>
+                    <span class="menu-legend">Revisitée</span>
+                    <span class="menu-price">22€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
+                <label class="menu-choice">
+                    <input type='radio' id="tiramisu" name="menu_dessert" value="tiramisu">
+                    <span class="menu-title">Tiramisu</span>
+                    <span class="menu-legend">À la noisette</span>
+                    <span class="menu-price">23€</span>
+                    <span class="menu-bloc_i">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </label>
             </div>
-            <div class="menu-choice">
-                <div class="menu-column">
-                    <p class="menu-title">Tiramisu</p>
-                    <p class="menu-legend">À la noisette</p>
-                </div>
-                <p class="menu-price">23€</p>
-                <i class="fas fa-check-circle"></i>
+            <div class="div-btn_command">
+                <input class="btn_cmd animation-btn" type="submit" value="Commander">
             </div>
-        </section> 
-        <button>Commander</button>
+            </form>
+        </section>
     </main>
     <footer>
         <h1>ohmyfood</h1>
         <ul>
-            <li><i class="fas fa-utensils"></i><a>Proposer un restaurant</a></li>
-            <li><i class="fas fa-hands-helping"></i><a>Devenir partenaire</a></li>
-            <li><a>Mentions légales</a></li>
-            <li><a>Contact</a></li>
+            <li class="li_logo"><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+            <li class="li_logo"><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:justatest@test.test">Contact</a></li>
         </ul>
     </footer>
 </body>

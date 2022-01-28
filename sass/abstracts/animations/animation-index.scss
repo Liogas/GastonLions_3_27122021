@@ -1,32 +1,29 @@
-/* Animation btn Function */
-.animation-btn {
-    transition: background-color .5s, box-shadow .5s;
-    &:hover {
-        box-shadow: 2px 4px 10px rgba(0,0,0,.25);
-        background-color: lighten($primary_color, 36%);
-        i {
-            color: $primary_color;
-            &.heart-empty {
-                color: black;
-            }
-        }
+ /* Animation loading page */
+ $duration-animation_spinner: 3s;
+ .container-spinner {
+    animation-name: animation-spinner_start;
+    animation-duration: $duration-animation_spinner;
+    i {
+        animation-name : animation-spinner;
+        animation-duration: $duration-animation_spinner;
     }
 }
- /* Animation loading page */
- $duration-animation_spinner:3s;
 .wait {
     animation-name: animation-view_container;
     animation-duration: $duration-animation_spinner;
 }
-.container-spinner {
-    animation-name: animation-spinner_start;
-    animation-duration: $duration-animation_spinner;
-}
-.container-spinner i {
-    animation-name : animation-spinner;
-    animation-duration: $duration-animation_spinner;
-}
 /* KEYFRAMES */
+@keyframes animation-spinner_start {
+    from {
+        opacity: 100;
+    }
+    90% {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
 @keyframes animation-view_container {
     from {
         opacity: 0;
@@ -41,7 +38,6 @@
 @keyframes animation-spinner {
     from {
         color : $primary_color;
-        transform: rotate(0deg);
     }
     50% {
         transform: rotate(360deg);
@@ -53,14 +49,3 @@
     }
 }
 
-@keyframes animation-spinner_start {
-    from {
-        opacity: 100;
-    }
-    90% {
-        opacity: 100;
-    }
-    to {
-        opacity: 0;
-    }
-}

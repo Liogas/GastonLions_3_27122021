@@ -1,0 +1,11 @@
+/* Mixin for media queries */
+@mixin tablet {
+    @media screen and (min-width : 810px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: 1025px) { 
+        @content;
+    }
+}

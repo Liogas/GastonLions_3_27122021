@@ -16,7 +16,7 @@
         font-size: 1.15rem;
         font-weight:lighter;
     }
-    @media screen and (min-width: 810px) {
+    @include tablet {
         grid-area: pr;
         padding: 4rem 0rem;
     }

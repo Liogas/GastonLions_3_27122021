@@ -7,7 +7,7 @@
         background-color: $gray_color100;
         box-shadow: 2px 4px 10px rgba(0,0,0,.15);
         display: grid;
-        grid-template-columns: 0px 25% 1fr;
+        grid-template-columns: 0 25% 1fr;
         align-items: center;
         margin: 1rem;
         padding: 1.25rem;
@@ -39,6 +39,12 @@
         .text {
             font-weight: 500;
         }
+        &:nth-child(3) {
+            background-color: lighten($primary-color,35%);
+            i {
+                color: $primary-color;
+            }  
+        }
     }
     @media screen and (min-width: 810px) {
         grid-area: fu;
@@ -48,13 +54,13 @@
             align-items: baseline;
             li {
                 text-align: center;
-                grid-template: 0px 25% 1fr / 1fr;     
+                grid-template: 0 25% 1fr / 1fr;     
                 .num {
                     margin-top : -2rem;
                     margin-left:calc(50% - 12.5px);
                 }
                 i {
-                    margin: 1rem 0rem;
+                    margin: 1rem 0;
                     font-size: 2rem;
                     &.logo_tel {
                         font-size: 2.25rem;
@@ -69,7 +75,7 @@
             }
         }
     }
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         padding: 4rem 2rem;
         li {
             i{  

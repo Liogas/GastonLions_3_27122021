@@ -26,13 +26,13 @@ header {
             font-size: 1.1rem;
         }
     }
-    @media screen and (min-width : 810px){
+    @include tablet {
         i{
             left: 30px;
             font-size:1.5rem;
         }
     }
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         i {
             left: 45px;
         }

@@ -1,37 +1,32 @@
 /* Variables for the font */
 /* Color */
-/* Animation btn Function */
-.animation-btn {
-  transition: background-color 0.5s, box-shadow 0.5s;
-}
-.animation-btn:hover {
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
-  background-color: #f4eefc;
-}
-.animation-btn:hover i {
-  color: #9356DC;
-}
-.animation-btn:hover i.heart-empty {
-  color: black;
-}
-
 /* Animation loading page */
-.wait {
-  animation-name: animation-view_container;
-  animation-duration: 3s;
-}
-
 .container-spinner {
   animation-name: animation-spinner_start;
   animation-duration: 3s;
 }
-
 .container-spinner i {
   animation-name: animation-spinner;
   animation-duration: 3s;
 }
 
+.wait {
+  animation-name: animation-view_container;
+  animation-duration: 3s;
+}
+
 /* KEYFRAMES */
+@keyframes animation-spinner_start {
+  from {
+    opacity: 100;
+  }
+  90% {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @keyframes animation-view_container {
   from {
     opacity: 0;
@@ -46,7 +41,6 @@
 @keyframes animation-spinner {
   from {
     color: #9356DC;
-    transform: rotate(0deg);
   }
   50% {
     transform: rotate(360deg);
@@ -57,64 +51,49 @@
     color: #9356DC;
   }
 }
-@keyframes animation-spinner_start {
-  from {
-    opacity: 100;
-  }
-  90% {
-    opacity: 100;
-  }
-  to {
-    opacity: 0;
-  }
-}
 /* Animation heart of cards */
 .container-heart i {
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 .container-heart:hover .heart-full {
   transform: scale(1);
 }
 .container-heart:hover .heart-empty {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 
-.btn:hover, .div-btn_command .btn_cmd:hover {
-  background: linear-gradient(170deg, #ff93e1 0%, #a16be0);
-  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.3);
+.animation-btn {
+  transition: filter 0.25s, box-shadow 0.25s;
+}
+.animation-btn:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.1);
 }
 
+.step_menu .menu-choice {
+  animation: fadein 0.5s;
+  animation-fill-mode: forwards;
+}
+.step_menu .menu-choice .menu-price, .step_menu .menu-choice .menu-bloc_i {
+  transition: transform 0.5s;
+}
+.step_menu .menu-choice .menu-price i, .step_menu .menu-choice .menu-bloc_i i {
+  transition: 0.5s;
+}
+.step_menu .menu-choice:hover .menu-price, .step_menu .menu-choice:hover .menu-bloc_i {
+  transform: translateX(0);
+}
+.step_menu .menu-choice:hover .menu-bloc_i i {
+  transform: rotate(-360deg);
+}
 .step_menu.entree .menu-choice {
   animation-delay: 0.5s;
 }
 .step_menu.meal .menu-choice {
-  animation-delay: 1s;
+  animation-delay: 0.75s;
 }
 .step_menu.dessert .menu-choice {
-  animation-delay: 1.5s;
-}
-.step_menu .menu-choice {
-  animation: fadein 1s;
-  animation-fill-mode: forwards;
-}
-.step_menu .menu-choice .menu-price {
-  transition: transform 1s;
-}
-.step_menu .menu-choice .menu-bloc_i {
-  transition: transform 1s;
-}
-.step_menu .menu-choice .menu-bloc_i i {
-  transform: rotate(0deg);
-  transition: 1s;
-}
-.step_menu .menu-choice:hover .menu-price {
-  transform: translate(0, 0);
-}
-.step_menu .menu-choice:hover .menu-bloc_i {
-  transform: translate(1px, 0);
-}
-.step_menu .menu-choice:hover .menu-bloc_i i {
-  transform: rotate(360deg);
+  animation-delay: 1s;
 }
 
 @keyframes fadein {
@@ -127,11 +106,7 @@
     transform: translateY(0);
   }
 }
-a {
-  color: black;
-  text-decoration: none;
-}
-
+/* Mixin for media queries */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -174,6 +149,11 @@ table {
 
 td, th {
   padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 html, body {
@@ -229,7 +209,7 @@ header.header-index {
     font-size: 1.5rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   header i {
     left: 45px;
   }
@@ -237,13 +217,6 @@ header.header-index {
 
 main section h2 {
   font-weight: bold;
-}
-
-@media screen and (min-width: 810px) {
-  .container-index {
-    display: grid;
-    grid-template-areas: " lo lo lo lo lo lo lo lo lo lo" " pr pr pr pr pr pr pr pr pr pr " " pr pr pr pr pr pr pr pr pr pr " " fu fu fu fu fu fu fu fu fu fu " " fu fu fu fu fu fu fu fu fu fu " " re re re re re re re re re re " " re re re re re re re re re re " " re re re re re re re re re re " " re re re re re re re re re re " " re re re re re re re re re re ";
-  }
 }
 
 footer {
@@ -263,7 +236,7 @@ footer li {
 }
 footer li.li_logo {
   display: grid;
-  grid-template: 1fr/1rem 1fr;
+  grid-template-columns: 1rem 1fr;
 }
 footer li.li_logo a {
   margin-left: 0.75rem;
@@ -276,6 +249,19 @@ footer li a {
 }
 footer li a:hover {
   text-decoration: underline;
+}
+@media screen and (min-width: 1025px) {
+  footer ul {
+    display: grid;
+    grid-template: 1fr 1fr/150px 150px 150px 150px;
+  }
+  footer ul li.li_logo {
+    grid-column: 1/3;
+  }
+  footer ul li:nth-child(3) {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
 }
 
 .presentation {
@@ -314,7 +300,7 @@ footer li a:hover {
   background-color: #f6f6f6;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   display: grid;
-  grid-template-columns: 0px 25% 1fr;
+  grid-template-columns: 0 25% 1fr;
   align-items: center;
   margin: 1rem;
   padding: 1.25rem;
@@ -347,6 +333,12 @@ footer li a:hover {
 .function ul li .text {
   font-weight: 500;
 }
+.function ul li:nth-child(3) {
+  background-color: #f2eafb;
+}
+.function ul li:nth-child(3) i {
+  color: #9356DC;
+}
 @media screen and (min-width: 810px) {
   .function {
     grid-area: fu;
@@ -358,14 +350,14 @@ footer li a:hover {
   }
   .function ul li {
     text-align: center;
-    grid-template: 0px 25% 1fr/1fr;
+    grid-template: 0 25% 1fr/1fr;
   }
   .function ul li .num {
     margin-top: -2rem;
     margin-left: calc(50% - 12.5px);
   }
   .function ul li i {
-    margin: 1rem 0rem;
+    margin: 1rem 0;
     font-size: 2rem;
   }
   .function ul li i.logo_tel {
@@ -378,7 +370,7 @@ footer li a:hover {
     padding-top: 0.5rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .function {
     padding: 4rem 2rem;
   }
@@ -400,32 +392,21 @@ footer li a:hover {
 }
 @media screen and (min-width: 810px) {
   .restaurant {
-    grid-area: re;
     display: grid;
-    grid-template-areas: "h2 ." "r2 r3" "r4 r5";
+    grid-template-columns: 1fr 1fr;
   }
   .restaurant h2 {
     margin-top: 0;
-    grid-area: h2;
+    grid-column: 1/3;
   }
 }
-.restaurant .card:nth-child(2) {
-  grid-area: r2;
-}
-.restaurant .card:nth-child(3) {
-  grid-area: r3;
-}
-.restaurant .card:nth-child(4) {
-  grid-area: r4;
-}
-.restaurant .card:nth-child(5) {
-  grid-area: r5;
-}
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .restaurant {
     padding: 4rem 2rem;
-    grid-template-areas: "h2 . . ." "r2 r3 r4 r5";
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .restaurant h2 {
+    grid-column: 1/5;
   }
 }
 
@@ -448,26 +429,17 @@ footer li a:hover {
 @media screen and (min-width: 810px) {
   .container-restaurants section .step_menu {
     display: grid;
-    grid-template-areas: "h2 . . ." "bo . . ." "s3 s3 s4 s4" "s5 s5 s6 s6";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-left: 1rem;
   }
-  .container-restaurants section .step_menu h2 {
-    grid-area: h2;
+  .container-restaurants section .step_menu h2, .container-restaurants section .step_menu .title-border {
+    grid-column: 1/5;
   }
-  .container-restaurants section .step_menu .title-border {
-    grid-area: bo;
+  .container-restaurants section .step_menu .menu-choice {
+    grid-column: 3/6;
   }
-  .container-restaurants section .step_menu .menu-choice:nth-child(3) {
-    grid-area: s3;
-  }
-  .container-restaurants section .step_menu .menu-choice:nth-child(4) {
-    grid-area: s4;
-  }
-  .container-restaurants section .step_menu .menu-choice:nth-child(5) {
-    grid-area: s5;
-  }
-  .container-restaurants section .step_menu .menu-choice:nth-child(6) {
-    grid-area: s6;
+  .container-restaurants section .step_menu .menu-choice:nth-child(2n+3) {
+    grid-column: 1/3;
   }
 }
 
@@ -488,6 +460,12 @@ footer li a:hover {
   margin-left: 1rem;
   font-size: 1rem;
   border: none;
+  outline: none;
+  border-bottom: 1px solid #eaeaea;
+  transition: border 0.5s;
+}
+.form_location input:focus {
+  border-color: #9356DC;
 }
 @media screen and (min-width: 810px) {
   .form_location {
@@ -548,6 +526,7 @@ footer li a:hover {
   position: relative;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
+  margin-top: 1rem;
 }
 .card img {
   object-fit: cover;
@@ -589,7 +568,7 @@ footer li a:hover {
     height: 200px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .card {
     width: 90%;
   }
@@ -599,8 +578,8 @@ footer li a:hover {
   background-color: white;
   overflow: hidden;
   display: grid;
+  grid-template-columns: 1fr 6vh 6vh;
   grid-template-areas: "title . i" "legend price i";
-  grid-template-columns: 70% 15% 15%;
   margin-top: 1rem;
   padding-left: 0.5rem;
   border-radius: 1rem;
@@ -611,7 +590,6 @@ footer li a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.15rem;
   margin-top: 0.75rem;
   grid-area: title;
 }
@@ -629,7 +607,9 @@ footer li a:hover {
   margin-top: 0.25rem;
   margin-bottom: 0.75rem;
   grid-area: price;
-  transform: translate(100%, 0);
+  transform: translateX(101%);
+  text-align: right;
+  padding-right: 0.75rem;
 }
 .menu-choice .menu-bloc_i {
   background-color: #99E2D0;
@@ -641,7 +621,7 @@ footer li a:hover {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   grid-area: i;
-  transform: translate(101%, 0);
+  transform: translateX(101%);
 }
 .menu-choice .menu-bloc_i i {
   font-size: 1.25rem;
@@ -649,6 +629,8 @@ footer li a:hover {
 @media screen and (min-width: 810px) {
   .menu-choice {
     width: 95%;
+    max-width: 95%;
+    grid-template-columns: 1fr 8vh 8vh;
   }
   .menu-choice .menu-title, .menu-choice .menu-legend {
     padding: 0.25rem;
@@ -656,6 +638,9 @@ footer li a:hover {
   .menu-choice .menu-price {
     padding-top: 0.25rem;
   }
+}
+.menu-choice .menu-bloc_i i {
+  width: 1.5rem;
 }
 
 .container-spinner {
@@ -672,19 +657,26 @@ footer li a:hover {
   font-size: 5rem;
 }
 
-.restaurant-img {
+body {
+  max-width: 2500px;
+  margin: auto;
+}
+
+.restaurants-img {
   width: 100%;
   max-width: 100%;
+  height: 500px;
   object-fit: cover;
+  object-position: center center;
 }
 
 .container-restaurants {
   background-color: #f6f6f6;
   position: relative;
   padding: 2rem 1rem;
-  margin-top: -3.3rem;
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
+  margin-top: -10rem;
 }
 .container-restaurants .restaurants-title {
   display: grid;
@@ -709,9 +701,6 @@ footer li a:hover {
   left: 0.03rem;
 }
 @media screen and (min-width: 810px) {
-  .container-restaurants {
-    margin-top: -10rem;
-  }
   .container-restaurants .restaurants-title h1 {
     margin-left: 0.5rem;
   }
@@ -722,9 +711,9 @@ footer li a:hover {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .container-restaurants {
-    margin-top: -25rem;
+    margin-top: -5rem;
   }
 }
 

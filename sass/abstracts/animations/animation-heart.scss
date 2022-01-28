@@ -1,12 +1,12 @@
 /* Animation heart of cards */ 
 .container-heart {
     i {
-        transition: transform 1s;
+        transition: transform .5s;
     }
     &:hover .heart-full {
         transform: scale(1);
     }
     &:hover .heart-empty {
-        transform: scale(.8);
+        transform: scale(.9);
     }
 }
