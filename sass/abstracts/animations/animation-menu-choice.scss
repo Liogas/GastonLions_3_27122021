@@ -9,8 +9,11 @@
             }
         }
         &:hover {
+            .menu-title, .menu-legend {
+                width: 75%;
+            }
             .menu-price, .menu-bloc_i {
-                transform: translateX(0);
+                transform: translateX(-100%);
             }
             .menu-bloc_i i {
                 transform: rotate(-360deg);
