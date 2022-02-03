@@ -629,7 +629,7 @@ footer li a:hover {
   .menu-choice {
     width: 95%;
     max-width: 95%;
-    grid-template-columns: 1fr 8vh 8vh;
+    grid-template-columns: 80% 20% 20%;
   }
   .menu-choice .menu-title, .menu-choice .menu-legend {
     padding: 0.25rem;

@@ -51,7 +51,7 @@
     @include tablet {
         width: 95%;
         max-width: 95%;
-        grid-template-columns: 1fr 8vh 8vh;
+        grid-template-columns: 80% 20% 20%;
     .menu-title,.menu-legend{
             padding: .25rem;
         }
